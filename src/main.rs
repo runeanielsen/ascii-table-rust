@@ -34,7 +34,7 @@ fn create_ascii_body() -> String {
 }
 
 fn ascii_table() -> String {
-    return format!("{}\n{}", create_ascii_header(), &create_ascii_body());
+    return format!("{}\n{}", create_ascii_header(), create_ascii_body());
 }
 
 fn main() {
