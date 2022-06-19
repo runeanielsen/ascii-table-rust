@@ -21,7 +21,7 @@ fn create_ascii_row(x: u32) -> String {
     return [x, x + 32, x + 64, x + 96]
         .into_iter()
         .map(fmt_block)
-        .collect::<Vec<String>>()
+        .collect::<Vec<_>>()
         .join(" | ");
 }
 
@@ -29,7 +29,7 @@ fn create_ascii_body() -> String {
     return (1..32)
         .into_iter()
         .map(create_ascii_row)
-        .collect::<Vec<String>>()
+        .collect::<Vec<_>>()
         .join("\n");
 }
 
