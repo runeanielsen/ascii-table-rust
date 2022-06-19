@@ -14,7 +14,7 @@ fn fmt_block(x: u32) -> String {
 }
 
 fn create_ascii_header() -> String {
-    (vec!["Dec  Hex  Oct  C"; 4]).join(" | ")
+    ["Dec  Hex  Oct  C"].repeat(4).join(" | ")
 }
 
 fn create_ascii_row(x: u32) -> String {
