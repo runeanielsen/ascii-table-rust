@@ -6,10 +6,6 @@ fn ascii_char(x: u32) -> char {
     }
 }
 
-fn fmt_block(x: u32) -> String {
-    format!("{:>3} {:>4x} {:>4o} {:>2}", x, x, x, ascii_char(x))
-}
-
 fn create_ascii_header() -> String {
     ["Dec  Hex  Oct  C"].repeat(4).join(" | ")
 }
@@ -17,7 +13,7 @@ fn create_ascii_header() -> String {
 fn create_ascii_row(x: u32) -> String {
     [x, x + 32, x + 64, x + 96]
         .into_iter()
-        .map(fmt_block)
+        .map(|x| format!("{:>3} {:>4x} {:>4o} {:>2}", x, x, x, ascii_char(x)))
         .collect::<Vec<_>>()
         .join(" | ")
 }
