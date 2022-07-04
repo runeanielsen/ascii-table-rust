@@ -2,7 +2,7 @@ fn ascii_char(x: u32) -> char {
     match x {
         0..=32 | 127 => ' ',
         33..=126 => char::from_u32(x).unwrap(),
-        _ => panic!("Could not find a matching case for {}", x),
+        _ => panic!("{} is not a valid ASCII character.", x),
     }
 }
 
