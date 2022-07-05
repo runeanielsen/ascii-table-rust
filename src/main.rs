@@ -7,7 +7,7 @@ fn ascii_char(x: u32) -> char {
 }
 
 fn ascii_header() -> String {
-    ["Dec  Hex  Oct  C"].repeat(4).join(" | ")
+    ["Dec  Hex  Oct  C"; 4].join(" | ")
 }
 
 fn ascii_row(x: u32) -> String {
